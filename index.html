@@ -13,7 +13,7 @@ body {font-family:Poppins; margin:0; background:#f8f9fa;}
 header {
   background:linear-gradient(135deg,#007bff,#00c6ff);
   color:#fff;
-  padding:40px 20px;
+  padding:50px 20px;
   text-align:center;
 }
 
@@ -25,12 +25,11 @@ header {
   text-decoration:none;
   color:#fff;
 }
-
 .call {background:#28a745;}
 .whatsapp {background:#25D366;}
 
 .section {
-  padding:40px 20px;
+  padding:50px 20px;
   max-width:1100px;
   margin:auto;
 }
@@ -48,13 +47,21 @@ header {
   box-shadow:0 5px 15px rgba(0,0,0,0.08);
 }
 
-.card img {
-  width:100%;
-  height:180px;
-  object-fit:cover;
+.card img {width:100%; height:180px; object-fit:cover;}
+.card-content {padding:15px;}
+
+.trust, .process, .testimonials, .faq {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
 }
 
-.card-content { padding:15px; }
+.box {
+  background:#fff;
+  padding:20px;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
 
 .form-box {
   background:#fff;
@@ -80,7 +87,6 @@ button {
   background:#fff;
   padding:25px;
   border-radius:12px;
-  margin-top:20px;
 }
 
 footer {
@@ -96,58 +102,54 @@ footer {
 
 <header>
 <h1>AC Repair Service in Delhi</h1>
-<p>Same Day Service | Expert Technicians</p>
+<p>Same Day Service | Expert Technicians | Affordable Price</p>
 
 <a href="tel:+919999999999" class="btn call">Call Now</a>
 <a href="https://wa.me/919999999999" class="btn whatsapp">WhatsApp</a>
 </header>
 
 <section class="section">
-
 <h2>Our Services</h2>
 
 <div class="services">
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952">
-<div class="card-content">
-<h3>AC Repair</h3>
-<p>Fast repair for all AC brands.</p>
+<div class="card"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952"><div class="card-content"><h3>AC Repair</h3></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db"><div class="card-content"><h3>Gas Filling</h3></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1598514982849-92d6f7c3b7df"><div class="card-content"><h3>Installation</h3></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4"><div class="card-content"><h3>AC Service</h3></div></div>
 </div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1606813907291-d86efa9b94db">
-<div class="card-content">
-<h3>Gas Filling</h3>
-<p>Quick cooling restore service.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1598514982849-92d6f7c3b7df">
-<div class="card-content">
-<h3>Installation</h3>
-<p>Split & window AC install.</p>
-</div>
-</div>
-
-<div class="card">
-<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4">
-<div class="card-content">
-<h3>AC Service</h3>
-<p>Cleaning & maintenance.</p>
-</div>
-</div>
-
-</div>
-
 </section>
 
 <section class="section">
+<h2>Why Choose Us</h2>
+<div class="trust">
+<div class="box">✔ Same Day Service</div>
+<div class="box">✔ 5+ Years Experience</div>
+<div class="box">✔ Affordable Price</div>
+<div class="box">✔ Expert Technicians</div>
+</div>
+</section>
 
+<section class="section">
+<h2>How It Works</h2>
+<div class="process">
+<div class="box">1. Call or WhatsApp us</div>
+<div class="box">2. Book your time slot</div>
+<div class="box">3. Technician visits your home</div>
+<div class="box">4. Problem solved instantly</div>
+</div>
+</section>
+
+<section class="section">
+<h2>Customer Reviews</h2>
+<div class="testimonials">
+<div class="box">“Very fast service, AC working perfectly!” ⭐⭐⭐⭐⭐</div>
+<div class="box">“Affordable and professional technician.” ⭐⭐⭐⭐⭐</div>
+<div class="box">“Same day repair, highly recommended.” ⭐⭐⭐⭐⭐</div>
+</div>
+</section>
+
+<section class="section">
 <h2>Book Service</h2>
-
 <div class="form-box">
 <form onsubmit="sendToWhatsApp(); return false;">
 <input type="text" id="name" placeholder="Your Name" required>
@@ -156,38 +158,36 @@ footer {
 <button type="submit">Submit</button>
 </form>
 </div>
-
 </section>
-
-<!-- ARTICLE -->
 
 <section class="section">
 <div class="article">
-
 <h2>When Should You Service Your AC?</h2>
+<p>Regular AC servicing helps maintain cooling performance and saves electricity bills.</p>
 
-<p>Regular AC servicing is important to maintain cooling performance and increase the life of your air conditioner.</p>
-
-<h3>When to Service Your AC</h3>
+<h3>When to Service</h3>
 <ul>
-<li>At least 2 times a year (before and during summer)</li>
-<li>If cooling is reduced</li>
-<li>If there is smell or water leakage</li>
-<li>If electricity bill increases suddenly</li>
+<li>Twice a year</li>
+<li>If cooling is low</li>
+<li>If smell or leakage appears</li>
 </ul>
 
-<h3>Why AC Service is Important</h3>
+<h3>Benefits</h3>
 <ul>
-<li>Better cooling performance</li>
+<li>Better cooling</li>
 <li>Lower electricity bills</li>
-<li>Longer AC lifespan</li>
-<li>Healthy and clean air</li>
-<li>Prevents sudden breakdown</li>
+<li>Long life</li>
+<li>Healthy air</li>
 </ul>
+</div>
+</section>
 
-<a href="tel:+919999999999" class="btn call">Call Now</a>
-<a href="https://wa.me/919999999999" class="btn whatsapp">WhatsApp</a>
-
+<section class="section">
+<h2>Frequently Asked Questions</h2>
+<div class="faq">
+<div class="box"><b>Q: How often should I service my AC?</b><br>A: At least 2 times a year.</div>
+<div class="box"><b>Q: Do you provide same day service?</b><br>A: Yes, same day service available.</div>
+<div class="box"><b>Q: What are your charges?</b><br>A: Affordable and depends on issue.</div>
 </div>
 </section>
 
