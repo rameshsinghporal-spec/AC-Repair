@@ -130,8 +130,8 @@ const amount = params.get("amount");
 document.getElementById("amount").innerHTML = "Amount: ₹" + amount;
 
 document.getElementById("qrImage").src =
-"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=paytmqr28100505010113odiu&pn=FoodLicense&am=" + amount + "&cu=INR";
-
+"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=paytmqr28100505010113odiu@paytm&pn=FoodLicense&am=" + amount + "&cu=INR";
+  
 function showSuccess(){
 document.getElementById("successMsg").style.display = "block";
 }
