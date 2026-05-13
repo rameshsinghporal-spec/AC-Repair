@@ -8,29 +8,82 @@
 
 <style>
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-font-family:Arial;
 background:#f3f3f3;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
+padding:40px;
 }
 
 .box{
+max-width:500px;
+margin:auto;
 background:#fff;
 padding:40px;
-text-align:center;
 border-radius:10px;
-}
-
-img{
-width:300px;
-margin-top:20px;
+text-align:center;
 }
 
 h1{
 margin-bottom:10px;
+color:#160042;
+}
+
+.amount{
+font-size:32px;
+font-weight:bold;
+margin:20px 0;
+color:#160042;
+}
+
+img{
+width:300px;
+height:300px;
+margin:20px 0;
+}
+
+.form-group{
+margin-top:20px;
+text-align:left;
+}
+
+.form-group label{
+display:block;
+margin-bottom:8px;
+font-weight:600;
+}
+
+.form-group input{
+width:100%;
+padding:14px;
+border:1px solid #ccc;
+border-radius:4px;
+}
+
+.submit-btn{
+margin-top:30px;
+width:100%;
+padding:16px;
+background:#160042;
+color:#fff;
+border:none;
+font-size:18px;
+font-weight:700;
+cursor:pointer;
+border-radius:5px;
+}
+
+.success{
+margin-top:25px;
+color:green;
+font-size:20px;
+font-weight:700;
+display:none;
 }
 
 </style>
@@ -42,11 +95,48 @@ margin-bottom:10px;
 
 <h1>Scan QR Code</h1>
 
-<p>Complete your payment</p>
+<p>Complete Your Payment</p>
 
-<img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay">
+<div class="amount" id="amount"></div>
+
+<img id="qrImage">
+
+<div class="form-group">
+<label>Enter UTR Number</label>
+<input type="text" placeholder="Enter UTR Number">
+</div>
+
+<div class="form-group">
+<label>Upload Payment Slip Screenshot</label>
+<input type="file">
+</div>
+
+<button class="submit-btn" onclick="showSuccess()">
+SUBMIT PAYMENT DETAILS
+</button>
+
+<div class="success" id="successMsg">
+Payment Details Submitted Successfully
+</div>
 
 </div>
+
+<script>
+
+const params = new URLSearchParams(window.location.search);
+
+const amount = params.get("amount");
+
+document.getElementById("amount").innerHTML = "Amount: ₹" + amount;
+
+document.getElementById("qrImage").src =
+"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=upi://pay?pa=YOURUPI@upi&pn=FoodLicense&am=" + amount + "&cu=INR";
+
+function showSuccess(){
+document.getElementById("successMsg").style.display = "block";
+}
+
+</script>
 
 </body>
 </html>
