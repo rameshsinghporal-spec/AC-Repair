@@ -28,6 +28,8 @@ body{
     margin:auto;
 }
 
+/* TOP HEADER */
+
 .top-header{
     background:#fff;
     padding:20px 0;
@@ -49,6 +51,8 @@ body{
     font-size:14px;
     color:#666;
 }
+
+/* NAVBAR */
 
 .navbar{
     background:#021b2f;
@@ -72,6 +76,8 @@ body{
     font-weight:600;
 }
 
+/* GREEN STRIP */
+
 .green-strip{
     background:#149900;
     color:#fff;
@@ -80,6 +86,8 @@ body{
     font-size:14px;
     font-weight:600;
 }
+
+/* ORANGE LEAD BAR */
 
 .lead-bar{
     background:#f39a3c;
@@ -90,7 +98,6 @@ body{
     display:flex;
     gap:12px;
     align-items:center;
-    flex-wrap:wrap;
 }
 
 .lead-title{
@@ -102,7 +109,6 @@ body{
 .lead-flex input,
 .lead-flex select{
     flex:1;
-    min-width:180px;
     padding:14px;
     border:none;
     border-radius:4px;
@@ -117,6 +123,8 @@ body{
     font-weight:700;
     cursor:pointer;
 }
+
+/* MAIN SECTION */
 
 .main-section{
     padding:70px 0;
@@ -135,6 +143,8 @@ body{
     grid-template-columns:2fr 1fr;
     gap:40px;
 }
+
+/* FORM BOX */
 
 .form-box{
     background:#fff;
@@ -170,8 +180,9 @@ body{
     padding:14px;
     border:1px solid #ccc;
     outline:none;
-    background:#fff;
 }
+
+/* INSTRUCTION BOX */
 
 .instructions{
     background:#fff;
@@ -197,6 +208,8 @@ body{
     line-height:1.8;
 }
 
+/* TERMS */
+
 .terms{
     margin-top:20px;
     line-height:1.9;
@@ -212,7 +225,169 @@ body{
     font-size:18px;
     font-weight:600;
     cursor:pointer;
-    width:100%;
+}
+
+/* PROCESS */
+
+.process{
+    background:#140032;
+    padding:90px 0;
+    color:#fff;
+    text-align:center;
+}
+
+.process h2{
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.process-card{
+    text-align:center;
+}
+
+.circle{
+    width:120px;
+    height:120px;
+    background:#f39a3c;
+    border-radius:50%;
+    border:6px solid #fff;
+    margin:auto;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    font-weight:700;
+}
+
+/* BENEFITS */
+
+.benefits{
+    padding:90px 0;
+}
+
+.benefits h2{
+    text-align:center;
+    font-size:48px;
+    color:#160042;
+    margin-bottom:50px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.benefit{
+    background:#d9d9d9;
+    padding:20px;
+    font-size:20px;
+    font-weight:500;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* FAQ */
+
+.faq{
+    padding:90px 0;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:48px;
+    color:#160042;
+    margin-bottom:50px;
+}
+
+.faq-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.faq-box{
+    background:#d9d9d9;
+    padding:20px;
+    font-size:19px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+/* FOOTER */
+
+footer{
+    background:#12002f;
+    color:#fff;
+    padding:70px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+footer h3{
+    margin-bottom:20px;
+    color:#ff9f1a;
+}
+
+footer p{
+    line-height:1.9;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer ul li{
+    margin-bottom:14px;
+}
+
+.bottom-strip{
+    background:#f39a3c;
+    color:#111;
+    text-align:center;
+    padding:18px;
+    margin-top:50px;
+    font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+.lead-flex,
+.form-grid,
+.process-grid,
+.benefit-grid,
+.faq-grid,
+.footer-grid{
+    grid-template-columns:1fr;
+    display:grid;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+.main-title,
+.process h2,
+.benefits h2,
+.faq h2{
+    font-size:34px;
+}
+
 }
 
 </style>
@@ -220,239 +395,232 @@ body{
 
 <body>
 
+<!-- HEADER -->
+
 <div class="top-header">
 
-<div class="logo">
-Food <span>License</span>
+    <div class="logo">
+        Food <span>License</span>
+    </div>
+
+    <div class="subline">
+        FOOD SAFETY REGISTRATION LICENSE CONSULTANT PORTAL
+    </div>
+
 </div>
 
-<div class="subline">
-FOOD SAFETY REGISTRATION LICENSE CONSULTANT PORTAL
-</div>
-
-</div>
+<!-- NAVBAR -->
 
 <div class="navbar">
 
 <div class="container nav-flex">
 
-<a href="#">REGISTRATION</a>
-<a href="#">RENEW</a>
-<a href="#">PROCEDURE</a>
-<a href="#">BENEFITS</a>
-<a href="#">FAQ'S</a>
-<a href="#">ABOUT US</a>
-<a href="#">CONTACT US</a>
+    <a href="#">REGISTRATION</a>
+    <a href="#">RENEW</a>
+    <a href="#">PROCEDURE</a>
+    <a href="#">BENEFITS</a>
+    <a href="#">FAQ'S</a>
+    <a href="#">ABOUT US</a>
+    <a href="#">CONTACT US</a>
 
 </div>
 
 </div>
+
+<!-- GREEN STRIP -->
 
 <div class="green-strip">
-License is mandatory for all food businesses in India.
+    License is mandatory for all food businesses in India.
 </div>
+
+<!-- LEAD BAR -->
 
 <div class="lead-bar">
 
 <div class="container lead-flex">
 
-<div class="lead-title">
-Urgent Form
-</div>
+    <div class="lead-title">
+        Urgent Form
+    </div>
 
-<input type="text" placeholder="Business Name">
+    <input type="text" placeholder="Business Name">
+    <input type="email" placeholder="Your Email">
+    <input type="text" placeholder="10 Digit Mobile no.">
 
-<input type="email" placeholder="Your Email">
+    <select>
+        <option>Select State</option>
+    </select>
 
-<input type="text" placeholder="10 Digit Mobile no.">
-
-<select>
-<option>Select State</option>
-<option>Delhi</option>
-<option>Maharashtra</option>
-<option>Punjab</option>
-</select>
-
-<a href="payment.html">
-
-<button type="button" class="lead-btn">
-SUBMIT
-</button>
-
-</a>
+    <button class="lead-btn">
+        SUBMIT
+    </button>
 
 </div>
 
 </div>
+
+<!-- MAIN SECTION -->
 
 <section class="main-section">
 
 <div class="container">
 
-<div class="main-title">
-FOOD LICENSE - REGISTRATION
-</div>
+    <div class="main-title">
+        FOOD LICENSE - REGISTRATION
+    </div>
 
-<div class="form-grid">
+    <div class="form-grid">
 
-<div class="form-box">
+        <!-- FORM -->
 
-<div class="form-heading">
-REGISTRATION LICENSE INFORMATION FORM
-</div>
+        <div class="form-box">
 
-<form onsubmit="goPayment(event)">
+            <div class="form-heading">
+                REGISTRATION LICENSE INFORMATION FORM
+            </div>
 
-<div class="form-row">
+            <div class="form-row">
 
-<div class="form-group">
-<label>Name of Person/Business</label>
-<input type="text" required>
-</div>
+                <div class="form-group">
+                    <label>Name of Person/Business</label>
+                    <input type="text">
+                </div>
 
-<div class="form-group">
-<label>Email Id</label>
-<input type="email" required>
-</div>
+                <div class="form-group">
+                    <label>Email Id</label>
+                    <input type="email">
+                </div>
 
-</div>
+            </div>
 
-<div class="form-row">
+            <div class="form-row">
 
-<div class="form-group">
-<label>Mobile No.</label>
-<input type="text" required>
-</div>
+                <div class="form-group">
+                    <label>Mobile No.</label>
+                    <input type="text">
+                </div>
 
-<div class="form-group">
+                <div class="form-group">
+                    <label>Nature of Business</label>
+                    <select>
+                        <option>Select</option>
+                    </select>
+                </div>
 
-<label>Nature of Business</label>
+            </div>
 
-<select required>
+            <div class="form-row">
 
-<option value="">Select Nature Of Business</option>
+                <div class="form-group">
+                    <label>Select Designation</label>
+                    <select>
+                        <option>Select Designation</option>
+                    </select>
+                </div>
 
-<option>Retailer</option>
-<option>Restaurant</option>
-<option>Food Manufacturer</option>
-<option>Wholesaler</option>
-<option>Distributor</option>
-<option>Importer</option>
-<option>Exporter</option>
+            </div>
 
-</select>
+            <div class="form-row">
 
-</div>
+                <div class="form-group">
+                    <label>Shop/Flat/Door No.</label>
+                    <input type="text">
+                </div>
 
-</div>
+                <div class="form-group">
+                    <label>Near By</label>
+                    <input type="text">
+                </div>
 
-<div class="form-row">
+            </div>
 
-<div class="form-group">
+            <div class="form-row">
 
-<label>Select Designation</label>
+                <div class="form-group">
+                    <label>Road/Street</label>
+                    <input type="text">
+                </div>
 
-<select required>
+                <div class="form-group">
+                    <label>Area/Locality</label>
+                    <input type="text">
+                </div>
 
-<option value="">Select Designation</option>
+            </div>
 
-<option>Individual</option>
-<option>Proprietor</option>
-<option>Partner</option>
-<option>Director</option>
+            <div class="form-row">
 
-</select>
+                <div class="form-group">
+                    <label>City</label>
+                    <input type="text">
+                </div>
 
-</div>
+                <div class="form-group">
+                    <label>District</label>
+                    <input type="text">
+                </div>
 
-</div>
+            </div>
 
-<div class="terms">
+            <div class="form-row">
 
-<input type="checkbox" required>
+                <div class="form-group">
+                    <label>PIN</label>
+                    <input type="text">
+                </div>
 
-I hereby affirm that I have fully read and understood the
-terms of service and acknowledge that this is a private
-consultancy platform.
+                <div class="form-group">
+                    <label>State</label>
+                    <input type="text">
+                </div>
 
-</div>
+            </div>
 
-<button type="submit" class="submit-main">
-SUBMIT APPLICATION
-</button>
+            <div class="terms">
 
-</form>
+                <input type="checkbox">
 
-</div>
+                I hereby affirm that I have fully read and understood the
+                terms of service and acknowledge that this is a private
+                consultancy platform.
 
-<div class="instructions">
+            </div>
 
-<div class="instructions-title">
-INSTRUCTIONS
-</div>
+            <button class="submit-main">
+                SUBMIT APPLICATION
+            </button>
 
-<ol>
+        </div>
 
-<li>Fill business name according to official documents.</li>
-<li>Enter registered email id properly.</li>
-<li>Fill valid mobile number carefully.</li>
-<li>Select nature of business correctly.</li>
-<li>Fill address details properly.</li>
+        <!-- INSTRUCTIONS -->
 
-</ol>
+        <div class="instructions">
 
-</div>
+            <div class="instructions-title">
+                INSTRUCTIONS
+            </div>
 
-</div>
+            <ol>
 
-</div>
+                <li>Fill business name according to official documents.</li>
 
-</div>
+                <li>Enter registered email id properly.</li>
 
-</section>
+                <li>Fill valid mobile number carefully.</li>
 
-<script>
+                <li>Select nature of business correctly.</li>
 
-function goPayment(event){
-event.preventDefault();
-window.location.href="payment.html";
-}
+                <li>Fill address details properly.</li>
 
-</script>
+                <li>Double check all applicant details.</li>
 
-</body>
+                <li>This website is privately managed consultancy platform.</li>
 
-</div>
+            </ol>
 
-<!-- RIGHT SIDE -->
+        </div>
 
-<div class="instructions">
-
-<div class="instructions-title">
-    INSTRUCTIONS
-</div>
-
-<ol>
-
-<li>Fill business name according to official documents.</li>
-
-<li>Enter registered email id properly.</li>
-
-<li>Fill valid mobile number carefully.</li>
-
-<li>Select nature of business correctly.</li>
-
-<li>Fill address details properly.</li>
-
-<li>Double check all applicant details.</li>
-
-<li>This website is privately managed consultancy platform.</li>
-
-</ol>
-
-</div>
-
-</div>
+    </div>
 
 </div>
 
@@ -464,33 +632,33 @@ window.location.href="payment.html";
 
 <div class="container">
 
-<h2>
-PROCEDURE TO PROCURE SPECIALIST FOR FOOD SAFETY REGISTRATION LICENSE
-</h2>
+    <h2>
+        PROCEDURE TO PROCURE SPECIALIST FOR FOOD SAFETY REGISTRATION LICENSE
+    </h2>
 
-<div class="process-grid">
+    <div class="process-grid">
 
-<div>
-<div class="circle">1</div>
-<h3>Fill Up Above Information Form</h3>
-</div>
+        <div class="process-card">
+            <div class="circle">1</div>
+            <h3>Fill Up Above Information Form</h3>
+        </div>
 
-<div>
-<div class="circle">2</div>
-<h3>Make Online Payment</h3>
-</div>
+        <div class="process-card">
+            <div class="circle">2</div>
+            <h3>Make Online Payment</h3>
+        </div>
 
-<div>
-<div class="circle">3</div>
-<h3>We Will Connect You With Experts</h3>
-</div>
+        <div class="process-card">
+            <div class="circle">3</div>
+            <h3>We Will Connect You With Experts</h3>
+        </div>
 
-<div>
-<div class="circle">4</div>
-<h3>Expert Will Assist You</h3>
-</div>
+        <div class="process-card">
+            <div class="circle">4</div>
+            <h3>Expert Will Assist You</h3>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
@@ -502,63 +670,63 @@ PROCEDURE TO PROCURE SPECIALIST FOR FOOD SAFETY REGISTRATION LICENSE
 
 <div class="container">
 
-<h2>
-BENEFITS OF FOOD SAFETY REGISTRATION CERTIFICATE
-</h2>
+    <h2>
+        BENEFITS OF FOOD SAFETY REGISTRATION CERTIFICATE
+    </h2>
 
-<div class="benefit-grid">
+    <div class="benefit-grid">
 
-<div class="benefit">
-<span>Legal Compliance</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Legal Compliance</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Brand Credibility</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Brand Credibility</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Consumer Trust</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Consumer Trust</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Business Expansion</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Business Expansion</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Quality Assurance</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Quality Assurance</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Compliance with Hygiene Standards</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Compliance with Hygiene Standards</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Market Access</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Market Access</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Avoid Legal Penalties</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Avoid Legal Penalties</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Prevents Adulteration</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Prevents Adulteration</span>
+            <span>+</span>
+        </div>
 
-<div class="benefit">
-<span>Competitive Advantage</span>
-<span>+</span>
-</div>
+        <div class="benefit">
+            <span>Competitive Advantage</span>
+            <span>+</span>
+        </div>
 
-</div>
+    </div>
 
 </div>
 
@@ -570,53 +738,63 @@ BENEFITS OF FOOD SAFETY REGISTRATION CERTIFICATE
 
 <div class="container">
 
-<h2>
-FREQUENTLY ASKED QUESTION
-</h2>
+    <h2>
+        FREQUENTLY ASKED QUESTION
+    </h2>
 
-<div class="faq-grid">
+    <div class="faq-grid">
 
-<div class="faq-box">
-<span>What is the full form of FSSAI?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>What is the full form of FSSAI?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>Can I apply online myself?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Can I apply for registration online myself?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>What is purpose of food license?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>What is the purpose of the food license?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>Is registration same as license?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Is registration same as license?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>Who needs registration?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Who needs to obtain registration?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>Can registration be cancelled?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Can registration be suspended or canceled?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>Is renewal mandatory?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Is renewal mandatory?</span>
+            <span>+</span>
+        </div>
 
-<div class="faq-box">
-<span>What documents are required?</span>
-<span>+</span>
-</div>
+        <div class="faq-box">
+            <span>Can registration details be modified?</span>
+            <span>+</span>
+        </div>
 
-</div>
+        <div class="faq-box">
+            <span>How much time does approval take?</span>
+            <span>+</span>
+        </div>
+
+        <div class="faq-box">
+            <span>What documents are required?</span>
+            <span>+</span>
+        </div>
+
+    </div>
 
 </div>
 
@@ -628,59 +806,47 @@ FREQUENTLY ASKED QUESTION
 
 <div class="container footer-grid">
 
-<div>
+    <div>
 
-<h3>OUR SERVICE MODEL</h3>
+        <h3>OUR SERVICE MODEL</h3>
 
-<p>
-This website is a private consultancy platform providing
-managed services for business operators in India.
-</p>
+        <p>
+            This website is a private consultancy platform providing
+            managed services for business operators in India.
+        </p>
 
-</div>
+    </div>
 
-<div>
+    <div>
 
-<h3>QUICK LINKS</h3>
+        <h3>QUICK LINKS</h3>
 
-<ul>
-<li>Privacy Policy</li>
-<li>Refund Policy</li>
-<li>Terms Of Service</li>
-<li>Contact Us</li>
-</ul>
+        <ul>
+            <li>Privacy Policy</li>
+            <li>Refund Policy</li>
+            <li>Terms Of Service</li>
+            <li>Contact Us</li>
+        </ul>
 
-</div>
+    </div>
 
-<div>
+    <div>
 
-<h3>FOOD SAFETY IS OUR MISSION</h3>
+        <h3>FOOD SAFETY IS OUR MISSION</h3>
 
-<p>
-“Safe Food, Good Health”
-</p>
+        <p>
+            “Safe Food, Good Health”
+        </p>
 
-</div>
+    </div>
 
 </div>
 
 <div class="bottom-strip">
-DISCLAIMER: THIS IS A PRIVATE CONSULTANCY WEBSITE AND NOT A GOVERNMENT PORTAL.
+    DISCLAIMER: THIS IS A PRIVATE CONSULTANCY WEBSITE AND NOT A GOVERNMENT PORTAL.
 </div>
 
 </footer>
 
-<script>
-
-function goPayment(event){
-event.preventDefault();
-window.location.href="payment.html";
-}
-
-</script>
-
 </body>
-</html>    
-
-    
 </html>
