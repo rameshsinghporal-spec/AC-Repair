@@ -98,6 +98,7 @@ body{
     display:flex;
     gap:12px;
     align-items:center;
+    flex-wrap:wrap;
 }
 
 .lead-title{
@@ -109,6 +110,7 @@ body{
 .lead-flex input,
 .lead-flex select{
     flex:1;
+    min-width:180px;
     padding:14px;
     border:none;
     border-radius:4px;
@@ -180,6 +182,7 @@ body{
     padding:14px;
     border:1px solid #ccc;
     outline:none;
+    background:#fff;
 }
 
 /* INSTRUCTION BOX */
@@ -225,6 +228,7 @@ body{
     font-size:18px;
     font-weight:600;
     cursor:pointer;
+    width:100%;
 }
 
 /* PROCESS */
@@ -449,6 +453,13 @@ footer ul li{
 
     <select>
         <option>Select State</option>
+        <option>Delhi</option>
+        <option>Maharashtra</option>
+        <option>Uttar Pradesh</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Gujarat</option>
+        <option>Bihar</option>
     </select>
 
     <button class="lead-btn">
@@ -479,16 +490,18 @@ footer ul li{
                 REGISTRATION LICENSE INFORMATION FORM
             </div>
 
+            <form action="payment.html">
+
             <div class="form-row">
 
                 <div class="form-group">
                     <label>Name of Person/Business</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label>Email Id</label>
-                    <input type="email">
+                    <input type="email" required>
                 </div>
 
             </div>
@@ -497,14 +510,28 @@ footer ul li{
 
                 <div class="form-group">
                     <label>Mobile No.</label>
-                    <input type="text">
+                    <input type="text" required>
                 </div>
 
                 <div class="form-group">
                     <label>Nature of Business</label>
-                    <select>
-                        <option>Select</option>
+
+                    <select required>
+                        <option value="">Select Nature Of Business</option>
+                        <option>Retailer</option>
+                        <option>Restaurant</option>
+                        <option>Food Manufacturer</option>
+                        <option>Wholesaler</option>
+                        <option>Distributor</option>
+                        <option>Importer</option>
+                        <option>Exporter</option>
+                        <option>Cloud Kitchen</option>
+                        <option>Bakery</option>
+                        <option>Dairy Business</option>
+                        <option>Hotel</option>
+                        <option>Street Food Vendor</option>
                     </select>
+
                 </div>
 
             </div>
@@ -513,9 +540,17 @@ footer ul li{
 
                 <div class="form-group">
                     <label>Select Designation</label>
-                    <select>
-                        <option>Select Designation</option>
+
+                    <select required>
+                        <option value="">Select Designation</option>
+                        <option>Individual</option>
+                        <option>Proprietor</option>
+                        <option>Partner</option>
+                        <option>Director</option>
+                        <option>Manager</option>
+                        <option>Owner</option>
                     </select>
+
                 </div>
 
             </div>
@@ -578,7 +613,7 @@ footer ul li{
 
             <div class="terms">
 
-                <input type="checkbox">
+                <input type="checkbox" required>
 
                 I hereby affirm that I have fully read and understood the
                 terms of service and acknowledge that this is a private
@@ -586,9 +621,11 @@ footer ul li{
 
             </div>
 
-            <button class="submit-main">
+            <button type="submit" class="submit-main">
                 SUBMIT APPLICATION
             </button>
+
+            </form>
 
         </div>
 
