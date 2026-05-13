@@ -99,7 +99,7 @@ display:none;
 
 <div class="amount" id="amount"></div>
 
-<img id="qrImage">
+<img src="yourqr.jpg" style="width:300px;height:500px;border-radius:10px;">
 
 <div class="form-group">
 <label>Enter UTR Number</label>
@@ -129,10 +129,6 @@ const amount = params.get("amount");
 
 document.getElementById("amount").innerHTML = "Amount: ₹" + amount;
 
-const upi = "upi://pay?pa=paytmqr28100505010113odiu@paytm&pn=FoodLicense&am=" + amount + "&cu=INR";
-
-document.getElementById("qrImage").src =
-"https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=" + encodeURIComponent(upi);
   
 function showSuccess(){
 document.getElementById("successMsg").style.display = "block";
