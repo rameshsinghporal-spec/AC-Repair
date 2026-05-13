@@ -4,124 +4,876 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Scan & Pay</title>
+<title>Food License Registration Portal</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#f4f4f4;
-display:flex;
-justify-content:center;
-align-items:center;
-height:100vh;
-padding:20px;
+    background:#f3f3f3;
+    color:#111;
 }
 
-.payment-box{
-background:#fff;
-padding:40px;
-max-width:500px;
-width:100%;
-text-align:center;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.1);
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
 }
 
-.payment-box h1{
-font-size:38px;
-margin-bottom:10px;
-color:#160042;
+/* TOP HEADER */
+
+.top-header{
+    background:#fff;
+    padding:20px 0;
+    text-align:center;
 }
 
-.payment-box p{
-font-size:18px;
-margin-bottom:25px;
-color:#444;
+.logo{
+    font-size:44px;
+    font-weight:700;
+    color:#160042;
 }
 
-.qr{
-width:300px;
-height:300px;
-object-fit:cover;
-border:6px solid #160042;
-padding:10px;
-border-radius:10px;
-background:#fff;
+.logo span{
+    color:#f59e0b;
 }
 
-.amount{
-margin-top:20px;
-font-size:28px;
-font-weight:700;
-color:#f39a3c;
+.subline{
+    margin-top:8px;
+    font-size:14px;
+    color:#666;
 }
 
-.note{
-margin-top:25px;
-font-size:15px;
-line-height:1.8;
-color:#555;
+/* NAVBAR */
+
+.navbar{
+    background:#021b2f;
+    padding:22px 0;
+    position:sticky;
+    top:0;
+    z-index:999;
 }
 
-button{
-margin-top:30px;
-background:#f39a3c;
-border:none;
-padding:15px 30px;
-font-size:18px;
-font-weight:700;
-cursor:pointer;
-border-radius:5px;
+.nav-flex{
+    display:flex;
+    justify-content:center;
+    gap:45px;
+    flex-wrap:wrap;
 }
 
-button:hover{
-background:#160042;
-color:#fff;
+.nav-flex a{
+    color:#fff;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+}
+
+/* GREEN STRIP */
+
+.green-strip{
+    background:#149900;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:14px;
+    font-weight:600;
+}
+
+/* LEAD BAR */
+
+.lead-bar{
+    background:#f39a3c;
+    padding:14px 0;
+}
+
+.lead-flex{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.lead-title{
+    color:#fff;
+    font-size:30px;
+    font-weight:700;
+}
+
+.lead-flex input,
+.lead-flex select{
+    flex:1;
+    min-width:180px;
+    padding:14px;
+    border:none;
+    border-radius:4px;
+}
+
+.lead-btn{
+    background:#13003b;
+    color:#fff;
+    border:none;
+    padding:14px 30px;
+    border-radius:4px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+/* MAIN SECTION */
+
+.main-section{
+    padding:70px 0;
+}
+
+.main-title{
+    text-align:center;
+    font-size:52px;
+    color:#160042;
+    margin-bottom:50px;
+    font-weight:700;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:40px;
+}
+
+/* FORM */
+
+.form-box{
+    background:#fff;
+    padding:40px;
+}
+
+.form-heading{
+    background:#160042;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    margin-bottom:35px;
+    font-size:28px;
+    font-weight:600;
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-bottom:22px;
+}
+
+.form-group label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:500;
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    padding:14px;
+    border:1px solid #ccc;
+    outline:none;
+    background:#fff;
+}
+
+/* INSTRUCTIONS */
+
+.instructions{
+    background:#fff;
+    padding:40px;
+}
+
+.instructions-title{
+    background:#160042;
+    color:#fff;
+    text-align:center;
+    padding:18px;
+    margin-bottom:30px;
+    font-size:28px;
+    font-weight:600;
+}
+
+.instructions ol{
+    padding-left:22px;
+}
+
+.instructions li{
+    margin-bottom:18px;
+    line-height:1.8;
+}
+
+/* TERMS */
+
+.terms{
+    margin-top:20px;
+    line-height:1.9;
+    font-size:15px;
+}
+
+.submit-main{
+    margin-top:25px;
+    background:#160042;
+    color:#fff;
+    border:none;
+    padding:18px 35px;
+    font-size:18px;
+    font-weight:600;
+    cursor:pointer;
+    width:100%;
+}
+
+/* PROCESS */
+
+.process{
+    background:#140032;
+    padding:90px 0;
+    color:#fff;
+    text-align:center;
+}
+
+.process h2{
+    font-size:48px;
+    margin-bottom:60px;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:30px;
+}
+
+.circle{
+    width:120px;
+    height:120px;
+    background:#f39a3c;
+    border-radius:50%;
+    border:6px solid #fff;
+    margin:auto;
+    margin-bottom:25px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    font-weight:700;
+}
+
+/* BENEFITS */
+
+.benefits{
+    padding:90px 0;
+}
+
+.benefits h2{
+    text-align:center;
+    font-size:48px;
+    color:#160042;
+    margin-bottom:50px;
+}
+
+.benefit-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.benefit{
+    background:#d9d9d9;
+    padding:20px;
+    font-size:20px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* FAQ */
+
+.faq{
+    padding:90px 0;
+}
+
+.faq h2{
+    text-align:center;
+    font-size:48px;
+    color:#160042;
+    margin-bottom:50px;
+}
+
+.faq-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.faq-box{
+    background:#d9d9d9;
+    padding:20px;
+    font-size:19px;
+    display:flex;
+    justify-content:space-between;
+}
+
+/* FOOTER */
+
+footer{
+    background:#12002f;
+    color:#fff;
+    padding:70px 0 30px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+footer h3{
+    margin-bottom:20px;
+    color:#ff9f1a;
+}
+
+footer p{
+    line-height:1.9;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer ul li{
+    margin-bottom:14px;
+}
+
+.bottom-strip{
+    background:#f39a3c;
+    color:#111;
+    text-align:center;
+    padding:18px;
+    margin-top:50px;
+    font-weight:600;
+}
+
+/* MOBILE */
+
+@media(max-width:992px){
+
+.form-grid,
+.process-grid,
+.benefit-grid,
+.faq-grid,
+.footer-grid{
+    grid-template-columns:1fr;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+.main-title,
+.process h2,
+.benefits h2,
+.faq h2{
+    font-size:34px;
+}
+
 }
 
 </style>
-
 </head>
 
 <body>
 
-<div class="payment-box">
+<!-- HEADER -->
 
-<h1>Scan & Pay</h1>
+<div class="top-header">
 
-<p>
-Scan QR Code Using Any UPI App
-</p>
+    <div class="logo">
+        Food <span>License</span>
+    </div>
 
-<!-- Yaha apna QR PNG lagana -->
-
-<img src="qr.png" class="qr">
-
-<div class="amount">
-₹999
-</div>
-
-<div class="note">
-
-After successful payment kindly take screenshot and
-share payment reference number with support team.
+    <div class="subline">
+        FOOD SAFETY REGISTRATION LICENSE CONSULTANT PORTAL
+    </div>
 
 </div>
 
-<button onclick="window.location.href='index.html'">
-Back To Home
+<!-- NAVBAR -->
+
+<div class="navbar">
+
+<div class="container nav-flex">
+
+    <a href="#">REGISTRATION</a>
+    <a href="#">RENEW</a>
+    <a href="#">PROCEDURE</a>
+    <a href="#">BENEFITS</a>
+    <a href="#">FAQ'S</a>
+    <a href="#">ABOUT US</a>
+    <a href="#">CONTACT US</a>
+
+</div>
+
+</div>
+
+<!-- GREEN STRIP -->
+
+<div class="green-strip">
+    License is mandatory for all food businesses in India.
+</div>
+
+<!-- LEAD BAR -->
+
+<div class="lead-bar">
+
+<div class="container lead-flex">
+
+    <div class="lead-title">
+        Urgent Form
+    </div>
+
+    <input type="text" placeholder="Business Name">
+
+    <input type="email" placeholder="Your Email">
+
+    <input type="text" placeholder="10 Digit Mobile no.">
+
+    <select>
+        <option>Select State</option>
+        <option>Delhi</option>
+        <option>Maharashtra</option>
+        <option>Uttar Pradesh</option>
+        <option>Punjab</option>
+        <option>Rajasthan</option>
+        <option>Gujarat</option>
+        <option>Bihar</option>
+    </select>
+
+    <button class="lead-btn">
+        SUBMIT
+    </button>
+
+</div>
+
+</div>
+
+<!-- MAIN -->
+
+<section class="main-section">
+
+<div class="container">
+
+<div class="main-title">
+    FOOD LICENSE - REGISTRATION
+</div>
+
+<div class="form-grid">
+
+<!-- LEFT FORM -->
+
+<div class="form-box">
+
+<div class="form-heading">
+    REGISTRATION LICENSE INFORMATION FORM
+</div>
+
+<form action="payment.html">
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Name of Person/Business</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label>Email Id</label>
+<input type="email" required>
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Mobile No.</label>
+<input type="text" required>
+</div>
+
+<div class="form-group">
+<label>Nature of Business</label>
+
+<select required>
+
+<option value="">Select Nature Of Business</option>
+
+<option>Retailer</option>
+<option>Restaurant</option>
+<option>Food Manufacturer</option>
+<option>Wholesaler</option>
+<option>Distributor</option>
+<option>Importer</option>
+<option>Exporter</option>
+<option>Cloud Kitchen</option>
+<option>Bakery</option>
+<option>Dairy Business</option>
+<option>Hotel</option>
+<option>Street Food Vendor</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+
+<label>Select Designation</label>
+
+<select required>
+
+<option value="">Select Designation</option>
+
+<option>Individual</option>
+<option>Proprietor</option>
+<option>Partner</option>
+<option>Director</option>
+<option>Manager</option>
+<option>Owner</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Shop/Flat/Door No.</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Near By</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>Road/Street</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>Area/Locality</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>City</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>District</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="form-row">
+
+<div class="form-group">
+<label>PIN</label>
+<input type="text">
+</div>
+
+<div class="form-group">
+<label>State</label>
+<input type="text">
+</div>
+
+</div>
+
+<div class="terms">
+
+<input type="checkbox" required>
+
+I hereby affirm that I have fully read and understood the
+terms of service and acknowledge that this is a private
+consultancy platform.
+
+</div>
+
+<button type="submit" class="submit-main">
+    SUBMIT APPLICATION
 </button>
 
+</form>
+
 </div>
+
+<!-- RIGHT SIDE -->
+
+<div class="instructions">
+
+<div class="instructions-title">
+    INSTRUCTIONS
+</div>
+
+<ol>
+
+<li>Fill business name according to official documents.</li>
+
+<li>Enter registered email id properly.</li>
+
+<li>Fill valid mobile number carefully.</li>
+
+<li>Select nature of business correctly.</li>
+
+<li>Fill address details properly.</li>
+
+<li>Double check all applicant details.</li>
+
+<li>This website is privately managed consultancy platform.</li>
+
+</ol>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROCESS -->
+
+<section class="process">
+
+<div class="container">
+
+<h2>
+PROCEDURE TO PROCURE SPECIALIST FOR FOOD SAFETY REGISTRATION LICENSE
+</h2>
+
+<div class="process-grid">
+
+<div>
+<div class="circle">1</div>
+<h3>Fill Up Above Information Form</h3>
+</div>
+
+<div>
+<div class="circle">2</div>
+<h3>Make Online Payment</h3>
+</div>
+
+<div>
+<div class="circle">3</div>
+<h3>We Will Connect You With Experts</h3>
+</div>
+
+<div>
+<div class="circle">4</div>
+<h3>Expert Will Assist You</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- BENEFITS -->
+
+<section class="benefits">
+
+<div class="container">
+
+<h2>
+BENEFITS OF FOOD SAFETY REGISTRATION CERTIFICATE
+</h2>
+
+<div class="benefit-grid">
+
+<div class="benefit">
+<span>Legal Compliance</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Brand Credibility</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Consumer Trust</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Business Expansion</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Quality Assurance</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Compliance with Hygiene Standards</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Market Access</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Avoid Legal Penalties</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Prevents Adulteration</span>
+<span>+</span>
+</div>
+
+<div class="benefit">
+<span>Competitive Advantage</span>
+<span>+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FAQ -->
+
+<section class="faq">
+
+<div class="container">
+
+<h2>
+FREQUENTLY ASKED QUESTION
+</h2>
+
+<div class="faq-grid">
+
+<div class="faq-box">
+<span>What is the full form of FSSAI?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>Can I apply online myself?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>What is purpose of food license?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>Is registration same as license?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>Who needs registration?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>Can registration be cancelled?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>Is renewal mandatory?</span>
+<span>+</span>
+</div>
+
+<div class="faq-box">
+<span>What documents are required?</span>
+<span>+</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container footer-grid">
+
+<div>
+
+<h3>OUR SERVICE MODEL</h3>
+
+<p>
+This website is a private consultancy platform providing
+managed services for business operators in India.
+</p>
+
+</div>
+
+<div>
+
+<h3>QUICK LINKS</h3>
+
+<ul>
+<li>Privacy Policy</li>
+<li>Refund Policy</li>
+<li>Terms Of Service</li>
+<li>Contact Us</li>
+</ul>
+
+</div>
+
+<div>
+
+<h3>FOOD SAFETY IS OUR MISSION</h3>
+
+<p>
+“Safe Food, Good Health”
+</p>
+
+</div>
+
+</div>
+
+<div class="bottom-strip">
+DISCLAIMER: THIS IS A PRIVATE CONSULTANCY WEBSITE AND NOT A GOVERNMENT PORTAL.
+</div>
+
+</footer>
 
 </body>
 </html>
