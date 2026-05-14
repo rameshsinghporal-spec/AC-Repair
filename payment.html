@@ -6,91 +6,94 @@
 
 <title>Payment Page</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <style>
 
-*{
+body{
 margin:0;
 padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
-body{
+font-family:Arial;
 background:#f3f3f3;
-padding:40px;
 }
 
-.payment-box{
+.top{
+background:#061b2d;
+padding:25px;
+color:#fff;
+font-size:28px;
+font-weight:bold;
+}
+
+.green{
+background:green;
+color:#fff;
+padding:10px;
+text-align:center;
+font-weight:bold;
+}
+
+.container{
+width:90%;
 max-width:1200px;
 margin:auto;
-background:#fff;
-padding:50px;
+padding:50px 0;
 text-align:center;
-border-radius:10px;
 }
 
 h1{
 font-size:40px;
-margin-bottom:20px;
-color:#160042;
+margin-bottom:10px;
 }
 
-.info{
-margin-top:20px;
+.details{
 line-height:2;
-font-size:18px;
+font-size:20px;
+margin-top:30px;
 }
 
-.plan-grid{
-display:grid;
-grid-template-columns:repeat(5,1fr);
+.pay-grid{
+display:flex;
+flex-wrap:wrap;
 gap:20px;
+justify-content:center;
 margin-top:50px;
 }
 
-.plan{
-border:2px solid #f39a3c;
-padding:25px;
-border-radius:8px;
+.pay-box{
+background:#fff;
+padding:30px;
+width:200px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
 
-.plan h2{
-font-size:24px;
-margin-bottom:15px;
-}
-
-.plan p{
-font-size:28px;
-font-weight:700;
-color:#160042;
+.pay-box h2{
+font-size:26px;
 margin-bottom:20px;
 }
 
 .pay-btn{
 background:#f39a3c;
-color:#000;
-padding:14px 25px;
-text-decoration:none;
-display:inline-block;
-font-weight:700;
-border-radius:4px;
+border:none;
+padding:15px 25px;
+font-size:22px;
+cursor:pointer;
+width:100%;
 }
 
 .note{
-margin-top:40px;
+margin-top:50px;
+font-size:22px;
 color:red;
+font-weight:bold;
+}
+
+.footer{
+background:#140032;
+color:#fff;
+padding:50px;
+margin-top:70px;
+text-align:center;
 font-size:20px;
-font-weight:700;
-}
-
-@media(max-width:992px){
-
-.plan-grid{
-grid-template-columns:1fr;
-}
-
 }
 
 </style>
@@ -98,63 +101,104 @@ grid-template-columns:1fr;
 
 <body>
 
-<div class="payment-box">
+<div class="top">
+FOOD LICENSE
+</div>
+
+<div class="green">
+Food License is mandatory for all food Businesses in India
+</div>
+
+<div class="container">
 
 <h1>Please Pay Below And Proceed</h1>
 
-<div class="info">
+<div class="details">
 
-<p><b>Reference Number:</b> REF123456789</p>
+<div>Reference Number : 399375ie139649</div>
 
-<p><b>Name of Applicant:</b> CUSTOMER NAME</p>
+<div>Name of Business : TEST BUSINESS</div>
 
-<p><b>Email:</b> customer@gmail.com</p>
+<div>Email : test@gmail.com</div>
 
-<p><b>Phone:</b> 9999999999</p>
+<div>Phone : 8888888888</div>
 
-<p><b>Nature of Business:</b> Retailer</p>
+<div>Nature of Business : RETAILER OF FOOD ITEM</div>
 
-<p><b>Designation:</b> Individual</p>
+<div>Designation : INDIVIDUAL</div>
 
 </div>
 
-<div class="plan-grid">
+<div class="pay-grid">
 
-<div class="plan">
+<div class="pay-box">
 <h2>1 Year</h2>
-<p>₹999</p>
-<a href="qr.html?amount=999" class="pay-btn">Pay Now</a>
+
+<a href="qr.html?amount=999">
+<button class="pay-btn">
+Pay ₹999
+</button>
+</a>
+
 </div>
 
-<div class="plan">
-<h2>2 Year</h2>
-<p>₹1399</p>
-<a href="qr.html?amount=1399" class="pay-btn">Pay Now</a>
+<div class="pay-box">
+<h2>2 Years</h2>
+
+<a href="qr.html?amount=1399">
+<button class="pay-btn">
+Pay ₹1399
+</button>
+</a>
+
 </div>
 
-<div class="plan">
-<h2>3 Year</h2>
-<p>₹1599</p>
-<a href="qr.html?amount=1599" class="pay-btn">Pay Now</a>
+<div class="pay-box">
+<h2>3 Years</h2>
+
+<a href="qr.html?amount=1599">
+<button class="pay-btn">
+Pay ₹1599
+</button>
+</a>
+
 </div>
 
-<div class="plan">
-<h2>4 Year</h2>
-<p>₹1799</p>
-<a href="qr.html?amount=1799" class="pay-btn">Pay Now</a>
+<div class="pay-box">
+<h2>4 Years</h2>
+
+<a href="qr.html?amount=1799">
+<button class="pay-btn">
+Pay ₹1799
+</button>
+</a>
+
 </div>
 
-<div class="plan">
-<h2>5 Year</h2>
-<p>₹1999</p>
-<a href="qr.html?amount=1999" class="pay-btn">Pay Now</a>
+<div class="pay-box">
+<h2>5 Years</h2>
+
+<a href="qr.html?amount=1999">
+<button class="pay-btn">
+Pay ₹1999
+</button>
+</a>
+
 </div>
 
 </div>
 
 <div class="note">
-IMPORTANT: Complete payment to proceed further.
+
+IMPORTANT : Please complete payment using QR code.
+
 </div>
+
+</div>
+
+<div class="footer">
+
+DISCLAIMER : THIS IS A PRIVATE CONSULTANCY WEBSITE.
 
 </div>
 
