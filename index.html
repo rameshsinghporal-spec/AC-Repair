@@ -538,18 +538,22 @@ padding:12px;
 
 <div class="lead-bar">
 
+<form action="payment.html">
+
 <div class="container lead-flex">
 
     <div class="lead-title">
         Urgent Form
     </div>
 
-    <input type="text" placeholder="Business Name">
-    <input type="email" placeholder="Your Email">
-    <input type="text" placeholder="10 Digit Mobile no.">
+    <input type="text" placeholder="Business Name" required>
 
-    <select>
-        <option>Select State</option>
+    <input type="email" placeholder="Your Email" required>
+
+    <input type="text" placeholder="10 Digit Mobile no." required>
+
+    <select required>
+        <option value="">Select State</option>
         <option>Delhi</option>
         <option>Maharashtra</option>
         <option>Uttar Pradesh</option>
@@ -559,14 +563,15 @@ padding:12px;
         <option>Bihar</option>
     </select>
 
-    <button class="lead-btn">
+    <button type="submit" class="lead-btn">
         SUBMIT
     </button>
 
 </div>
 
-</div>
+</form>
 
+</div>
 <!-- MAIN SECTION -->
 
 <section class="main-section">
