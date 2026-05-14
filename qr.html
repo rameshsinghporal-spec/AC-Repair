@@ -3,86 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>QR Payment</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
-
 body{
 background:#f3f3f3;
-padding:40px;
+font-family:Arial;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+margin:0;
 }
 
 .box{
-max-width:500px;
-margin:auto;
 background:#fff;
 padding:40px;
 border-radius:10px;
 text-align:center;
-}
-
-h1{
-margin-bottom:10px;
-color:#160042;
+width:400px;
 }
 
 .amount{
-font-size:32px;
+font-size:30px;
 font-weight:bold;
 margin:20px 0;
-color:#160042;
 }
 
-img{
+.qr-img{
 width:300px;
-height:300px;
-margin:20px 0;
+height:auto;
+border-radius:10px;
 }
 
-.form-group{
-margin-top:20px;
-text-align:left;
-}
-
-.form-group label{
-display:block;
-margin-bottom:8px;
-font-weight:600;
-}
-
-.form-group input{
+input{
 width:100%;
 padding:14px;
+margin-top:15px;
 border:1px solid #ccc;
-border-radius:4px;
+border-radius:5px;
 }
 
-.submit-btn{
-margin-top:30px;
+button{
 width:100%;
-padding:16px;
+padding:15px;
+margin-top:20px;
 background:#160042;
 color:#fff;
 border:none;
 font-size:18px;
-font-weight:700;
-cursor:pointer;
+font-weight:bold;
 border-radius:5px;
+cursor:pointer;
 }
 
 .success{
-margin-top:25px;
+margin-top:20px;
 color:green;
-font-size:20px;
-font-weight:700;
+font-weight:bold;
 display:none;
 }
 
@@ -93,30 +72,22 @@ display:none;
 
 <div class="box">
 
-<h1>Scan QR Code</h1>
-
-<p>Complete Your Payment</p>
+<h2>Scan QR & Pay</h2>
 
 <div class="amount" id="amount"></div>
 
-<img src="yourqr.jpg" style="width:300px;height:500px;border-radius:10px;">
+<img src="yourqr.jpg" class="qr-img">
 
-<div class="form-group">
-<label>Enter UTR Number</label>
 <input type="text" placeholder="Enter UTR Number">
-</div>
 
-<div class="form-group">
-<label>Upload Payment Slip Screenshot</label>
 <input type="file">
-</div>
 
-<button class="submit-btn" onclick="showSuccess()">
-SUBMIT PAYMENT DETAILS
+<button onclick="showSuccess()">
+Submit Payment
 </button>
 
 <div class="success" id="successMsg">
-Payment Details Submitted Successfully
+Payment Submitted Successfully
 </div>
 
 </div>
@@ -129,7 +100,6 @@ const amount = params.get("amount");
 
 document.getElementById("amount").innerHTML = "Amount: ₹" + amount;
 
-  
 function showSuccess(){
 document.getElementById("successMsg").style.display = "block";
 }
